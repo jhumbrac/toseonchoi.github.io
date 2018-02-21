@@ -4,19 +4,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     letter-spacing: 1px;
-    margin: 0px;
 }
+
 section {
     padding:4em 0;
-}
-div {
-/*    border: 1px solid blue;*/
+    border: 1px solid blue;
 }
 
 h1 {
-    font-size: 56px;
-    font-size: calc(4vw + 4vh);
-    line-height: calc(4vw + 4vh);
+    font-size: 72px;
+    font-size: calc(3.5vw + 3.5vh);
+    line-height: calc(3.5vw + 3.5vh);
     text-transform: uppercase;
 }
 
@@ -49,7 +47,6 @@ header {
     min-height: 75px;
 }
 
-
 #logo {
     float: left;
     margin: 10px;
@@ -59,21 +56,15 @@ header {
 
 nav {
     float: right;
-    color: #ffffff;
     font-size: 14px;
     font-weight: bold;
     margin: 10px;
 }
 
 nav a {
-    text-decoration: none;
     color: #ffffff;
     padding-right: 10px;
     padding-left: 10px;
-}
-
-nav a:hover {
-    color: #99e1d9;
 }
 
 /*.cover {
@@ -90,13 +81,12 @@ nav a:hover {
 
 #cover {
     margin-top: 75px;
-    background: url(../images/cover_1920x500.jpg) no-repeat center center fixed;
+    background: url(../images/cover_1920x500.jpg) /*no-repeat center center fixed*/ ;
     background-size: cover;
     background-position: center;
-    height: 90vh;
-    padding: 20em 0 0 0;
+    height: 70vh;
+    padding: 4em 0 0 0;
 }
-
 
 #cover_text_container {
 }
@@ -104,6 +94,7 @@ nav a:hover {
 .cover_headline {
     color: #FFFFFF;
     display: inline-block;
+    max-width: 600px;
 }
 
 .cover_subhead {
