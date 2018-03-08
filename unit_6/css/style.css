@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
-* { margin: 0; padding: 0; box-sizing: border-box; /*border: solid blue 1px;*/}
+* { margin: 0; padding: 0; box-sizing: border-box;}
 
 /*
 color palette
@@ -21,13 +21,16 @@ body {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
 section {
     padding: 60px 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-weight: 700;
-    text-transform: uppercase;
     padding: 8px 0;
 }
 
@@ -37,15 +40,20 @@ h1 {
     white-space: pre-line;
 }
 
+h2, h4, h5 {
+    text-transform: uppercase;
+}
+
 h2, h3 {
     font-size: 1.5em;
 }
 
-h3 {
-    text-transform: none;
+h5 {
+    font-size: 0.8em;
+    letter-spacing: 2px;
 }
 
-h4 {
+.wrapper_67em h4 {
     color: rgb(255, 15, 0);
 }
 
@@ -225,6 +233,7 @@ header {
 }
 
 .skills_icon {
+    display: inline;
     width: 3em;
     height: 3em;
     padding: 0 4px;
@@ -244,19 +253,49 @@ header {
     font-size: 12px;
 }
 
-.projcts_covers {
+.projects_cover_container {
+    display: inline-block;
+    position: relative;
     max-width: 450px;
     width: 100%
 }
 
-.projects_info {
-    display: inline-block;
-    max-width: 60em;
-    padding: 15px;
+.projects_cover_image {
+    max-width: 450px;
+    width: 100%
+}
+
+.projects_cover_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.9);
+    border: 1px #323232 solid;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.projects_cover_container:hover .projects_cover_overlay {
+    opacity: 1;
+}
+
+.projects_overlay_text {
+    position: absolute;
+    width: 90%;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .projcts_image {
     width: 100%;
+    margin-bottom: 4px;
 }
 
 #clients {
@@ -264,6 +303,7 @@ header {
 }
 
 .clients_logo {
+    display: inline;
     width: 110px;
     margin: 8px auto;
 }
@@ -281,6 +321,7 @@ footer {
 }
 
 .footer_icon {
+    display: inline;
     margin: 4px;
     width: 2em;
     height: 2em;
@@ -291,4 +332,3 @@ footer {
     color: #787878;
     display: block;
 }
-
