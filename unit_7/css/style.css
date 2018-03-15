@@ -11,6 +11,7 @@
 /*
 white= #ffffff;
 bg-grey= #f8f8f8;
+light-grey= #dfdfdf;
 light-grey= #c6c6c6;
 mid-grey= #949494;
 dark-grey= #636363;
@@ -23,7 +24,6 @@ red= rgb(255, 15, 0);
 /*--ASSET---------------------------------------------------------------------------------------------------------*/
 
 body {
-    background: #f8f8f8;
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 16px;
     color: #313131;
@@ -47,7 +47,7 @@ h1 {
     text-transform: none;
     font-size: 3.5em;
     line-height: 0.95em;
-    margin-bottom: .5em;
+    padding-bottom: 0.5em;
 /*    font-size: calc(3vw + 3vh);
     line-height: calc(3vw + 3vh);
     white-space: pre-line; */
@@ -71,8 +71,13 @@ strong {
 hr {
     background-color: #949494;
     border: none;
-    width: 100%;
+    width: 84%;
     height: 1px;
+    margin: 2.5em auto;
+}
+
+p + hr {
+    width: 100%;
     margin: 1em auto;
 }
 
@@ -81,7 +86,7 @@ nav {
 }
 
 nav a{
-    color: #949494;
+    color: #dfdfdf;
     font-size: .8em;
     font-weight: 700;
     margin-right: 2em;
@@ -90,8 +95,8 @@ nav a{
 }
 
 nav a:hover, nav a:active {
-    color: #313131;
-    border-bottom: 1px solid #313131;
+    color: #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
 }
 
 a, ul, li {
@@ -121,43 +126,21 @@ li a {
     height: 0;
 }
 
-.margin_bottom {
-    margin-bottom: 3em;
-}
-
 
 /*--WRAPPER-------------------------------------------------------------------------------------------------------*/
 
 
-#wrapper {
-}
-
-.contents_wrapper_no_space {
-    width: 84%;
-    max-width: 1440px;
-    position: relative;
-    margin: 0 auto;
-}
 
 .contents_wrapper {
     position: relative;
     width: 85%;
     max-width: 1440px;
-    position: relative;
-    padding: 3em 0;
     margin: 0 auto;
-/*    border: 1px solid blue;*/
-}
-
-.contents_wrapper_inner {
-    display: block;
-/*    border: 1px solid red;*/
 }
 
 .col_full {
     width: 99%;
     margin:.5%;
-/*    border: 1px solid orange;*/
 }
 
 .col_half {
@@ -166,7 +149,6 @@ li a {
     margin: .5%;
     vertical-align: top;
     position: relative;
-/*    border: 1px solid orange;*/
 }
 
 /*--HEADER-------------------------------------------------------------------------------------------------------*/
@@ -182,6 +164,7 @@ header {
     width: 100%;
     height: 4em;
     overflow: hidden;
+    background-color: #313131;
 }
 
 .header_wrapper {
@@ -189,8 +172,8 @@ header {
     max-width: 1440px;
     min-height: 4em;
     margin: 0 auto;
-/*    border: 1px solid blue;*/
 }
+
 
 #logo {
     width: 165px;
@@ -199,6 +182,8 @@ header {
 
 #top_nav {
     padding: 20.5px 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
@@ -213,24 +198,24 @@ main {
     left: 0;*/
 }
 
+.gallery_wrapper {
+    position: relative;
+    width: 84%;
+    max-width: 1440px;
+    margin: 5em auto 0;
+}
+
 #gallery {
     background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg) no-repeat center center scroll;
     background-size: cover;
     height: 80vh;
 }
 
-/*.gallery_wrapper {
-    width: 85%;
-    max-width: 1440px;
-    position: relative;
-    padding: 1em 0;
-    margin: 0 auto;
-}*/
 
 .gallery_pagination {
-    width: 100%;
+    width: 99%;
     display: block;
-    padding: .5em 0 4em;
+    padding: .5em 0 2em;
 }
 
 .gallery_pagination_dot {
@@ -241,8 +226,8 @@ main {
     background: transparent;
     border: 1px solid #313131;
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: .75em;
+    height: .75em;
     margin: .25em;
     transition: background 0.3s;
 }
@@ -253,19 +238,12 @@ main {
 
 .skills_icon {
     display: inline;
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
     margin: 4px 4px 0 0;
 }
 
 #project {
-}
-
-.projects_cover_container {
-    display: inline-block;
-    position: relative;
-    max-width: 450px;
-    width: 100%
 }
 
 .projects_cover_image {
@@ -280,7 +258,7 @@ main {
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(49, 49, 49, 0.9);
+    background-color: rgba(49, 49, 49, 0.8);
     opacity: 0;
 }
 
@@ -290,9 +268,9 @@ main {
 
 .projects_overlay_text {
     position: absolute;
-    color: #c6c6c6;
+    color: #f8f8f8;
     text-align: center;
-    border-bottom: 1px solid #c6c6c6;
+    border-bottom: 1px solid #f8f8f8;
     width: max-content;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -311,21 +289,27 @@ main {
     background-color: #949494;
 }
 
+.clients_logo {
+    display: inline-block;
+    width: 7.97%;
+}
+
+
 /*--FOOTER-------------------------------------------------------------------------------------------------------*/
 
 
 footer {
     background: #313131;
-    color: #949494;
+    color: #dfdfdf;
     margin-top: 5em;
+    padding: 2em 0;
 }
 
 .footer_icon_wrapper {
     position: absolute;
     float: left;
     bottom: 0;
-    z-index: 1;
-    margin-bottom: 3em;
+    margin-bottom: 0;
 }
 
 .footer_icon {
@@ -349,11 +333,11 @@ form {
 input, textarea {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 0.8em;
-    color: #949494;
+    color: #dfdfdf;
     width: 100%;
     outline: none;
     background: transparent;
-    border: solid 1px #636363;
+    border: solid 1px #dfdfdf;
     /*transition: all 0.3s ease-in-out;*/
 }
 
@@ -374,10 +358,9 @@ textarea {
     font-size: 0.8em;
     font-weight: 700;
     text-transform: uppercase;
-    color: #313131;
+    color: #dfdfdf;
     outline: none;
-    background: #949494;
-    border: solid 1px #636363;
+    border: solid 1px #dfdfdf;
     cursor: pointer;
     width: max-content;
     padding: .4em 1em;
@@ -386,13 +369,13 @@ textarea {
 
 input:hover, textarea:hover{
     color: #313131;
-    background: #949494;
+    background: #dfdfdf;
 
 }
 
 #send_button:hover {
     color: #313131;
-    background: #c6c6c6;
+    background: #dfdfdf;
 }
 
 
@@ -405,8 +388,3 @@ input:hover, textarea:hover{
 }*/
 
 
-.clients_logo {
-    display: inline;
-    width: 110px;
-    margin: 8px auto;
-}
