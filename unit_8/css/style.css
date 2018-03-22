@@ -38,12 +38,10 @@ img {
     display: block;
 }
 
-
 h1, h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
-
 
 h1 {
     text-transform: none;
@@ -75,24 +73,18 @@ hr {
     border: none;
     height: 1px;
     margin: 0 auto;
-    width: 79%;
-    max-width: 1064px;
-}
-
-p + hr, ul + hr {
     width: 100%;
-    margin: 1.5em auto;
 }
 
 hr + p {
-    margin: 1.5em auto;
+    margin-bottom: 1em;
 }
 
 nav {
     padding: .25em 0;
 }
 
-nav a{
+nav a {
     color: #dfdfdf;
     font-size: .8em;
     font-weight: 700;
@@ -100,6 +92,17 @@ nav a{
     text-transform: uppercase;
     text-decoration: none;
     padding: .5em 0;
+}
+
+label {
+    color: #dfdfdf;
+    font-size: .8em;
+    font-weight: 700;
+    margin-right: 3%;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5em 0;  
+    display: none;
 }
 
 nav a:hover, nav a:active {
@@ -142,6 +145,7 @@ li a {
 
 /*--WRAPPER-------------------------------------------------------------------------------------------------------*/
 
+
 .contents_wrapper {
     width: 80%;
     max-width: 1080px;
@@ -150,14 +154,13 @@ li a {
 
 .col_full {
     width: 100%;
-/*  border: 1px solid blue; */
+
 }
 
 .col_half {
     width: 50%;
     float: left;
     display: block;
-/*    border: 1px solid blue; */
 }
 
 .col_quarter {
@@ -198,6 +201,12 @@ header {
     padding: .5em 0;
 }
 
+.header_col_half {
+    width: 50%;
+    float: left;
+    display: block;
+}
+
 #logo {
     width: 10em;
     float: left;
@@ -208,6 +217,14 @@ header {
     overflow: hidden;
 }
 
+#mobile_nav {
+    display: none;
+}
+
+#toggle {
+    height: 1em;
+    display: none;
+}
 
 /*--MAIN-------------------------------------------------------------------------------------------------------*/
 
@@ -226,12 +243,28 @@ main {
     margin: 1em auto;
 }
 
-.gallery_image {
+.gallery_wrapper {
     display:none
-    height: 80vh;
-/*    height: calc(25vw + 30vh); 
+    width: 100%;
+}
+
+.gallery_image {
+    height: calc(25vw + 30vh); 
+}
+
+.slide_1 {
     background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg) no-repeat center center scroll;
-    background-size: cover;*/
+    background-size: cover;
+}
+
+.slide_2 {
+    background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_2_new.jpg) no-repeat center center scroll;
+    background-size: cover;
+}
+
+.slide_3 {
+    background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_3_new.jpg) no-repeat center center scroll;
+    background-size: cover;
 }
 
 .fade {
@@ -277,11 +310,20 @@ main {
     background-color: #313131!important
 }
 
+.skills_wrapper hr {
+    display: none;
+}
+
 .skills_icon {
     display: inline;
     width: 2.5em;
     height: 2.5em;
     margin: .25em .25em 0 0;
+}
+
+.hr_inner {
+    width: 100%;
+    margin: 1.5em auto;
 }
 
 .projects_cover_image {
@@ -300,7 +342,7 @@ main {
     opacity: 0;
 }
 
-.col_half:hover .projects_cover_overlay {
+.projects_cover_overlay:hover {
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
@@ -332,14 +374,13 @@ main {
     background-color: #dfdfdf;
 }
 
-
 .clients_logo {
     display: block;
     float: left;
     margin: 0.25em 0;
     padding: 0;
     width: 25%;
-    min-width: 5.5em;
+    min-width: 4.25em;
 }
 
 .clients_logo:hover {
@@ -362,7 +403,7 @@ footer {
 .contact_icon_wrapper {
     position: absolute;
     bottom: 0;
-    margin-bottom: 3em;
+    margin-bottom: 3.25em;
 }
 
 .contact_icon {
@@ -431,25 +472,216 @@ input:hover, textarea:hover{
 }
 
 
+/*--MEDIA-------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 1370px) {
+
+    .contents_wrapper, .header_wrapper {
+        width: 90%;
+    }
+
+    #about, #projects, #clients {
+        padding: 3em 0;
+    }
+
+    .pagination_wrapper {
+        padding: .5em 0 2.5em;
+    }
+}
+
+
+@media only screen and (max-width: 925px) {
+
+    .skills_wrapper, .experiences_wrapper {
+        width: 100%;
+    }
+
+    .skills_wrapper hr {
+        display: block;
+}
+
+
+@media only screen and (max-width: 785px) {
+
+    P {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .col_half, .col_full {
+        width: 100%;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .col_inner {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    nav a{
+        margin-right: 1.5em;
+    }
+
+    .gallery_image {
+        height: calc(40vw + 25vh); 
+    }
+
+    .about_wrapper hr {
+        width: 2em;
+    }
+    
+    .skills_wrapper hr {
+        width: 2em;
+    }
+
+    .pagination_wrapper {
+        padding: .5em 0 1.5em;
+    }
+
+    .clients_logo {
+        display: inline-block;
+        width: 15%;
+        min-width: 5em;
+        float: none;
+    }
+
+    .clients_logo:hover {
+        transform: none;
+        transition: none;
+    }
+
+    form {
+        max-width: 30em;
+        margin: 0 auto;
+    }
+
+    #send_button {
+        margin: 0.5em auto 1em;
+    }
+
+    .contact_icon_wrapper {
+        position: relative;
+        bottom: 0;
+        margin: 3em auto 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+
+    nav a{
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    h1 {
+        font-size: 2.5em;
+        line-height: 0.95em
+    }
+
+    .contents_wrapper {
+        width: 95%
+    } 
+
+    header {
+        height: 3em;
+    }
+
+    .header_wrapper {
+        width: 95%;
+        height: 3em;
+        padding: .25em 0;
+    }
+
+    #logo {
+        width: 8em;
+    }
+   
+    #nav_top {
+        padding: 2.4px 0;
+        float: right;
+    }
+
+    nav {
+        display: none;
+    }
+    label {
+        display: block;
+        float: right;
+    }
+/*
+    #mobile_nav {
+        display: block;
+        float: right;
+        border-bottom: none;
+    }
+*/
+    nav a {
+        display: block;
+        border-bottom: none;
+
+    }
+
+    nav:hover a{
+        display: block;
+        border-bottom: none;
+
+    }
+
+    #toggle:checked + nav {
+        display: block;
+        float: right;
+        text-align: right;
+    }
+
+    #gallery, #projects_page {
+        margin: 0 auto;
+    }
+
+    .gallery_image {
+        height: calc(45vw + 20vh); 
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .gallery_image {
+        height: calc(50vw + 25vh); 
+    }
+
+
 /*--TEST-------------------------------------------------------------------------------------------------------*/
 
 
-/* #toggle {
-    display: none;
- }*/
 
-/*
-@media only screen and (max-width: 480px) {
-    .article {
-        float: none;
-        width: auto;
-    }
+/*.nav_top_min_wrapper {
+    display: inline-block;
+    cursor: pointer;
+}
 
-    label {
-        display: block;
-    }
+.bar1, .bar2, .bar3 {
+    width: 2em;
+    height: .25em;
+    background-color: white;
+    margin: .4em 0;
+    transition: 0.4s;
+}
 
-    #toggle:checked +nav {
-        display: block;
-    }
-*/
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);*/

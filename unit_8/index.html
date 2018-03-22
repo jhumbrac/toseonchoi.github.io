@@ -13,20 +13,25 @@
 	<body>
 		<header>
 			<div class="header_wrapper clearfix">
-				<div class="col_half">
+				<div class="header_col_half">
 					<div class="col_inner">
 						<a href="index.html">
 							<img id="logo" src="images/Seon-Choi_Portfolio_Logo.svg" alt="Logo" title="Seon Choi's Portfolio">
 						</a>
 					</div>
 				</div>
-	  			<div id="nav_top" class="col_half">
-	  				<nav class="col_inner">
-		  				<a href="#">Home</a>
-						<a href="#about">About</a>
-						<a href="#projects">Projects</a>
-						<a href="#contact">Contact</a>
-					</nav>
+	  			<div id="nav_top" class="header_col_half">
+	  				<div class="col_inner">
+		  				<label for="toggle">&#9776;</label>
+		  				<input type="checkbox" id="toggle">
+		  				<nav>
+	<!-- 	  					<a href="#" id="mobile_nav">&#9776;</a> -->
+			  				<a href="#">Home</a>
+							<a href="#about">About</a>
+							<a href="#projects">Projects</a>
+							<a href="#contact">Contact</a>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -36,10 +41,10 @@
 
 				<section id="gallery" class="contents_wrapper">
 					<div class="col_full">
-						<div class="col_inner">
-							<img class="gallery_image fade" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg">
-							<img class="gallery_image fade" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_2_new.jpg">
-							<img class="gallery_image fade" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_3_new.jpg">
+						<div class="gallery wrapper col_inner">
+							<img class="gallery_image slide_1 fade">
+							<img class="gallery_image slide_2 fade">
+							<img class="gallery_image slide_3 fade">
 							<div class="pagination_wrapper">
 							    <span class="pagination_dot" onclick="currentDiv(1)"></span>
 							    <span class="pagination_dot" onclick="currentDiv(2)"></span>
@@ -49,7 +54,11 @@
 					</div>
 				</section>
 
-				<hr>
+				<div class="contents_wrapper">
+					<div class="col_inner">
+						<hr>
+					</div>
+				</div>
 
 				<section id="about" class="contents_wrapper clearfix">
 					<div class="col_half">
@@ -58,11 +67,11 @@
 						</div>
 					</div>
 					<div class="col_half">
-						<div class="col_inner">
+						<div class="about_wrapper col_inner">
 							<p><strong>Seon Choi</strong> is a professional designer with 5+ years of experiences in advertising and marketing communications, based in LA, California. She has knowledge of the visual fundamentals such as graphics, typography, layout, color, and experiences with print, digital, web, and social media. She is also accustomed to performing in deadline-driven environments.</p>
-							<hr>
+							<hr class="hr_inner">
 						</div>
-						<div class="col_half">
+						<div class="skills_wrapper col_half">
 							<div class="col_inner">	
 								<h2 >Skills</h2>
 								<div>
@@ -71,9 +80,10 @@
 						   			<img class="skills_icon" src="images/skills/adobe_indesign.svg" alt="Skill Icon" title="Adobe InDesign">
 						   			<img class="skills_icon" src="images/skills/adobe_after-effects.svg" alt="Skill Icon" title="Adobe After Effects">
 						   		</div>
+						   		<hr class="hr_inner">
 						   	</div>
 						</div>
-			   			<div class="col_half">	
+			   			<div class="experiences_wrapper col_half">	
 			   				<div class="col_inner">	
 							   	<h2>Experiences</h2>
 				   				<ul>
@@ -87,7 +97,11 @@
 			   		</div>
 				</section>
 
-				<hr>
+				<div class="contents_wrapper">
+					<div class="col_inner">
+						<hr>
+					</div>
+				</div>
 
 				<section id="projects" class="contents_wrapper clearfix">
 					<div class="col_full">
@@ -98,7 +112,7 @@
 					<div class="col_full">
 						<div class="col_half clearfix">
 							<div class="col_inner_grid">
-								<a href="#">
+								<a href="projects_golfbuddy_seasonal-promotion_flyer.html">
 								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
 									<div class="projects_cover_overlay">
 									    <div class="projects_overlay_text">
@@ -110,7 +124,7 @@
 						</div>
 						<div class="col_half clearfix">
 							<div class="col_inner_grid">
-								<a href="#">
+								<a href="projects_golfbuddy_seasonal-promotion_flyer.html">
 								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
 									<div class="projects_cover_overlay">
 									    <div class="projects_overlay_text">
@@ -122,7 +136,7 @@
 						</div>
 						<div class="col_half clearfix">
 							<div class="col_inner_grid">
-								<a href="#">
+								<a href="projects_golfbuddy_seasonal-promotion_flyer.html">
 								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
 									<div class="projects_cover_overlay">
 									    <div class="projects_overlay_text">
@@ -134,7 +148,19 @@
 						</div>
 						<div class="col_half clearfix">
 							<div class="col_inner_grid">
-								<a href="#">
+								<a href="projects_golfbuddy_seasonal-promotion_flyer.html">
+								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
+									<div class="projects_cover_overlay">
+									    <div class="projects_overlay_text">
+								   			<h3>GolfBuddy</h3>
+									  	</div>
+									</div>
+								</a>
+							</div>
+						</div>		
+						<div class="col_half clearfix">
+							<div class="col_inner_grid">
+								<a href="projects_golfbuddy_seasonal-promotion_flyer.html">
 								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
 									<div class="projects_cover_overlay">
 									    <div class="projects_overlay_text">
@@ -146,7 +172,7 @@
 						</div>
 						<div class="col_half clearfix">
 							<div class="col_inner_grid">
-								<a href="#">
+								<a href="projects_golfbuddy_seasonal-promotion_flyer.html">
 								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
 									<div class="projects_cover_overlay">
 									    <div class="projects_overlay_text">
@@ -155,23 +181,15 @@
 									</div>
 								</a>
 							</div>
-						</div>
-						<div class="col_half clearfix">
-							<div class="col_inner_grid">
-								<a href="#">
-								  	<img class="projects_cover_image" src="images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1_new.jpg" alt="temp" title="temp">
-									<div class="projects_cover_overlay">
-									    <div class="projects_overlay_text">
-								   			<h3>GolfBuddy</h3>
-									  	</div>
-									</div>
-								</a>
-							</div>
-						</div>
+						</div>																		
 					</div>						
 				</section>
 
-				<hr>
+				<div class="contents_wrapper">
+					<div class="col_inner">
+						<hr>
+					</div>
+				</div>
 
 				<section id="clients" class="contents_wrapper clearfix">
 					<div class="col_half">
@@ -179,7 +197,7 @@
 							<h1>Clients</h1>
 						</div>
 					</div>
-					<div class="col_half">
+					<div class="col_half clearfix">
 						<div class="col_inner">					
 				   			<img class="clients_logo" src="images/clients/Logo_HiteJinro.png" alt="Client_Logo_HiteJinro" title="HiteJinro">
 				   			<img class="clients_logo" src="images/clients/Logo_GolfBuddy.png" alt="Client_Logo_GolfBuddy" title="GolfBuddy">
@@ -206,23 +224,23 @@
 					<div class="col_inner">
 						<h1>Let's Talk</h1>
 					</div>
-					<div class="col_inner contact_icon_wrapper">
-						<img class="contact_icon" alt="Email Icon" src="images/footer_icon_email_64x64.png">
-						<img class="contact_icon" alt="Linkedin Icon" src="images/footer_icon_linkedin_64x64.png">
-						<span class="copyright">Copyright &copy; 2018, Seon Choi. All rights reserved.</span>
-					</div>
 				</div>
 
 				<div class="col_half">
 					<div class="col_inner">
-						<h2>Contact</h2>
 						<form>
-						  <input id="name" type="text" placeholder="Name">
-						  <input id="email" type="text" placeholder="Email">
-						  <textarea id="message" type="text" placeholder="Message"></textarea>
-						  <div id="send_button" type="submit" value="send">Send</div>
+							<h2>Contact</h2>
+							<input id="name" type="text" placeholder="Name">
+							<input id="email" type="text" placeholder="Email">
+							<textarea id="message" type="text" placeholder="Message"></textarea>
+							<div id="send_button" type="submit" value="send">Send</div>
 						</form>
 					</div>
+				</div>
+				<div class="col_inner contact_icon_wrapper">
+					<img class="contact_icon" alt="Email Icon" src="images/footer_icon_email_64x64.png">
+					<img class="contact_icon" alt="Linkedin Icon" src="images/footer_icon_linkedin_64x64.png">
+					<span class="copyright">Copyright &copy; 2018, Seon Choi. All rights reserved.</span>
 				</div>
 			</section>
 		</footer>
