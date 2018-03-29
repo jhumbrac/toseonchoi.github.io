@@ -24,13 +24,12 @@ red= rgb(255, 15, 0);
 /*--ASSET---------------------------------------------------------------------------------------------------------*/
 
 body {
-    /*font-family: 'Open Sans', 'Arial', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     line-height: 1.4em;
     color: #303030;
     text-transform: uppercase;
-/*    background: #f2f2f2;*/
+    background: #fff;
 }
 
 img {
@@ -46,7 +45,6 @@ h1, h2, h3, strong {
 h1 {
     font-family: 'Playfair Display', serif;
     text-transform: none;
-/*    font-size: 4em;*/
     line-height: 0.7em;
     display:inline-block;
     padding-bottom: .5em;
@@ -107,6 +105,14 @@ hr + p {
 a {
     text-decoration: none;
 }
+a:active {
+    color: currentColor;
+}
+
+a:visited {
+    color: currentColor;
+}
+/**/
 
 ul {
     list-style: none;
@@ -172,7 +178,8 @@ header {
     width: 100%;
     height: 5em;
     z-index: 1;
-    background: #fff;
+    color: #f2f2f2;
+    background: #303030;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .02);
 }
 
@@ -200,7 +207,6 @@ header {
 }
 
 header nav a {
-    color: #303030;
     font-size: .8em;
     font-weight: 700;
     letter-spacing: 2px;
@@ -209,7 +215,7 @@ header nav a {
 }
 
 header nav a:hover, nav a:active {
-    border-bottom: 1px solid #303030;
+    border-bottom: 1px solid #f2f2f2;
     padding: .125em 0;
 }
 
@@ -218,7 +224,7 @@ header nav a:hover, nav a:active {
 }
 
 label {
-    color: #303030;
+    color: #f2f2f2;
     font-size: .8em;
     padding: .5em 0;  
     display: none;
@@ -234,21 +240,26 @@ main {
     margin: 0 auto;
 }
 
-#about {
-    background: #d9d9d9;
+#gallery{
+   /* background: #313131;*/
+}
 
+#about{
+    background: #f2f2f2;
 }
 
 #about, #projects, #clients {
     padding: 7em 0;  
 }
 
-#gallery, #clients {
-    background: #f2f2f2;
-}
-
 #gallery_wrapper {
     padding-top: 1.5em;
+}
+
+#clients {
+    background: url(../images/background_clients.jpg) no-repeat center center scroll;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .gallery {
@@ -256,17 +267,17 @@ main {
 }
 
 .slide_1 {
-    background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1.jpg) no-repeat center center scroll;
+    background: url(../images/projects/Lotte_Trevi_Print-AD_1.jpg) no-repeat center center scroll;
     background-size: cover;
 }
 
 .slide_2 {
-    background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_2.jpg) no-repeat center center scroll;
+    background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_1.jpg) no-repeat center center scroll;
     background-size: cover;
 }
 
 .slide_3 {
-    background: url(../images/projects/GolfBuddy_2015-2016-Seasonal-Promotion_Flyers_3.jpg) no-repeat center center scroll;
+    background: url(../images/projects/Zespri_SunGold-Kiwi_Green-Kiwi.jpg) no-repeat center center scroll;
     background-size: cover;
 }
 
@@ -351,6 +362,7 @@ main {
 
 #projects_page {
     padding: 4em 0 1em; 
+    background: #f2f2f2;
 }
 
 .projects_image {
@@ -488,10 +500,10 @@ input:hover, textarea:hover{
 
 @media only screen and (max-width: 1130px) {
 
-/*    h1 {
-    font-size: 3.5em;
+    h1 {
+    font-size: 3em;
     }
-*/
+
     .gallery {
         height: calc(30vw + 35vh); 
     }
@@ -509,10 +521,10 @@ input:hover, textarea:hover{
 
 @media only screen and (max-width: 960px) {
 
-/*    h1 {
-        font-size: 3em;
+    h1 {
+        font-size: 2.5em;
         line-height: 0.9em;
-    }*/
+    }
 }
 
 @media only screen and (max-width: 820px) {
@@ -546,7 +558,10 @@ input:hover, textarea:hover{
     #gallery .contents_wrapper {
        width: 100%; 
     }
-
+    #gallery_wrapper{
+        margin: 0;
+        padding-top: 0;
+    }
     .gallery {
         height: calc(30vw + 45vh); 
     }
@@ -576,8 +591,11 @@ input:hover, textarea:hover{
     }
     
     #projects {
-        width: 100%;
         padding: 7em 0 3em;
+    }
+
+    #projects .contents_wrapper{
+        width: 95%;
     }
 
     #clients .contents_wrapper .col_66 {
