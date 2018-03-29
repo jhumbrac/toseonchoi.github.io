@@ -417,6 +417,7 @@ form {
 input, textarea {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 0.8em;
+    color: #c1c1c1;
     width: 100%;
     outline: none;
     background: transparent;
@@ -441,7 +442,7 @@ textarea {
 }
 
 input:hover, textarea:hover{
-    color: #303030;
+    color: #313131;
     background: #c1c1c1;
 }
 
