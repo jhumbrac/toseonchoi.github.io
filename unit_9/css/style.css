@@ -252,18 +252,24 @@ main {
     padding: 7em 0;  
 }
 
-#gallery_wrapper {
-    padding-top: 1.5em;
-}
-
 #clients {
     background: url(../images/background_clients.jpg) no-repeat center center scroll;
     background-size: cover;
     background-attachment: fixed;
 }
 
+
+#gallery_wrapper{
+        margin: 0;
+    }
+
 .gallery {
-    height: calc(25vw + 30vh); 
+    height: calc(30vw + 30vh); 
+}
+
+#gallery .contents_wrapper {
+    width: 100%;
+    max-width: 100%;
 }
 
 .slide_1 {
@@ -299,18 +305,21 @@ main {
 }
 
 .pagination_wrapper {
-    padding: .5em 0 6em;
+    padding: 1em 0 6em;
+    text-align: center;
 }
 
 .pagination_dot {
-    float: left;
+    float: none;
+    display: inline-block;
     cursor: pointer;
     border: 1px solid #303030;
     border-radius: 50%;
-    width: .75em;
-    height: .75em;
+    width: 1em;
+    height: 1em;
     margin-right: .5em;
     transition: background 0.3s;
+    
 }
 
 .pagination_dot_selected {
