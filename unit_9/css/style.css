@@ -252,12 +252,6 @@ main {
     padding: 7em 0;  
 }
 
-#clients {
-    background: url(../images/background_clients.jpg) no-repeat center center scroll;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 
 #gallery_wrapper{
         margin: 0;
@@ -388,7 +382,12 @@ main {
 
 .project_nav_button:hover {
     background-color: #d9d9d9;
+}
 
+#clients {
+    background: url(../images/background_clients.jpg) no-repeat center center scroll;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .clients_logo {
@@ -565,13 +564,6 @@ input:hover, textarea:hover{
         text-align: left;
     }
 
-    #gallery .contents_wrapper {
-       width: 100%; 
-    }
-    #gallery_wrapper{
-        margin: 0;
-        padding-top: 0;
-    }
     .gallery {
         height: calc(30vw + 45vh); 
     }
